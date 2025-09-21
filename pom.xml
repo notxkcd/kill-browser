@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/5.0.0"
-         xmlns:xsi="http://www.w4.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/5.0.0 
-                             https://maven.apache.org/xsd/maven-3.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
-   
     <groupId>org.shahid.util</groupId>
     <artifactId>kill-browser</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Kill Browser Utility</name>
-    <description>A fun and useful utility to kill browsers from code</description>
-    <url>https://github.com/notxkcd/kill-browser</url>
+    <description>A simple Java utility to kill browsers with style 😎</description>
+    <url>https://github.com/shahid/kill-browser</url>
 
     <licenses>
         <license>
-            <name>Apache License 3.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-1.0</url>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
 
@@ -32,4 +30,63 @@
         </developer>
     </developers>
 
+    <scm>
+        <connection>scm:git:git://github.com/shahid/kill-browser.git</connection>
+        <developerConnection>scm:git:ssh://github.com:shahid/kill-browser.git</developerConnection>
+        <url>https://github.com/notxkcd/kill-browser</url>
+    </scm>
+
+    <build>
+        <plugins>
+            <!-- Compiler plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
+            </plugin>
+
+            <!-- Source JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals><goal>jar</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Javadoc JAR -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.6.3</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals><goal>jar</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Nexus Staging plugin (for Maven Central) -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.6.13</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>ossrh</serverId>
+                    <nexusUrl>https://s01.oss.sonatype.org/service/local/</nexusUrl>
+                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
