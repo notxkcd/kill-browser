@@ -6,14 +6,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.shahid.util</groupId>
+    <groupId>io.github.notxkcd</groupId>
     <artifactId>kill-browser</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Kill Browser Utility</name>
     <description>A simple Java utility to kill browsers with style 😎</description>
-    <url>https://github.com/shahid/kill-browser</url>
+    <url>https://github.com/notxkcd/kill-browser</url>
 
     <licenses>
         <license>
@@ -24,17 +24,25 @@
 
     <developers>
         <developer>
-            <id>shahid</id>
+            <id>notxkcd</id>
             <name>Mohammed Shahid</name>
             <email>shahid.xkcd@gmail.com</email>
         </developer>
     </developers>
 
     <scm>
-        <connection>scm:git:git://github.com/shahid/kill-browser.git</connection>
-        <developerConnection>scm:git:ssh://github.com:shahid/kill-browser.git</developerConnection>
+        <connection>scm:git:git://github.com/notxkcd/kill-browser.git</connection>
+        <developerConnection>scm:git:ssh://github.com:notxkcd/kill-browser.git</developerConnection>
         <url>https://github.com/notxkcd/kill-browser</url>
     </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub notxkcd Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/notxkcd/kill-browser</url>
+        </repository>
+    </distributionManagement>
 
     <build>
         <plugins>
@@ -74,19 +82,7 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!-- Nexus Staging plugin (for Maven Central) -->
-            <plugin>
-                <groupId>org.sonatype.plugins</groupId>
-                <artifactId>nexus-staging-maven-plugin</artifactId>
-                <version>1.6.13</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <serverId>ossrh</serverId>
-                    <nexusUrl>https://s01.oss.sonatype.org/service/local/</nexusUrl>
-                    <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
+
 </project>
