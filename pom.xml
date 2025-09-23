@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.notxkcd</groupId>
   <artifactId>kill-browser</artifactId>
-  <version>1.0.4</version>
+  <version>1.0.5</version>
   <packaging>jar</packaging>
   <name>Kill Browser Utility</name>
   <description>A simple Java utility to kill browsers with style 😎</description>
