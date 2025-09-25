@@ -45,13 +45,14 @@ public class KillBrowser {
             String emoji = browserEmojis.getOrDefault(browser.toLowerCase(), "🛑");
 
             if (browser.equalsIgnoreCase("edge")) {
-                System.out.println("✅ All " + emoji + " " + BROWSER_COLOR + browser + RESET + " browsers are terminated.");
-                System.out.println("😂 Meme mode: Nobody asked for Edge, but we killed it anyway!");
+                System.out.println("All " + " " + BROWSER_COLOR + browser + RESET + " browsers are terminated. ✅");
+                System.out.println("😂 Nobody asked for Edge, but we killed it anyway!");
                 System.out.println("💀 RIP Edge... back to downloading Chrome.");
                 System.out.println("🤔 Are you REALLY using Edge? Like... willingly?");
                 System.out.println("📢 Breaking News: User found running Edge in 2025, authorities still investigating.");
             } else {
-                System.out.println("✅ All " + emoji + " " + BROWSER_COLOR + browser + RESET + " browsers are terminated.");
+                // System.out.println("✅ All " + emoji + " " + BROWSER_COLOR + browser + RESET + " browsers are terminated.");
+                System.out.println("All " + " " + BROWSER_COLOR + browser + RESET + " browsers are terminated. ✅");
             }
 
         } catch (IOException e) {
